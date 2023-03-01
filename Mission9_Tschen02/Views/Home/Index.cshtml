@@ -1,6 +1,4 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿
 
 @model ProjectsViewModel
 
@@ -8,28 +6,7 @@
 @foreach (Book p in Model.Books)
     {
     // Print out books
-    <div class="card card-outline-primary m-1 p-1">
-        <div class="bg-faded p-1">
-            <h3>@p.Title</h3>
-                <span class="badge badge-pill badge-primary" style="float:right">
-                    <span> Price: @p.Price</span>
-                </span>
-            <ul>
-                <div class="card-text p">
-                    <li>
-                        Author: @p.Author
-                    </li>
-
-                    <li> Publisher: @p.Publisher</li>
-                    <li> ISBN: @p.Isbn</li>
-                    <li> Classification: @p.Classification</li>
-                    <li> Category: @p.Category</li>
-                    <li> PageCount: @p.PageCount</li>
-                </div>
-            </ul>
-        </div>
-    </div>
-        <br /><br />
+        <partial name="ProjectSummary" model="p" />
     }
 
 
