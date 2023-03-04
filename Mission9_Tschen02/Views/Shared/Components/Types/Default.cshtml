@@ -4,10 +4,18 @@
 @{
 }
 @model IEnumerable<string>
-<div class="d-grid gap-2 ">
+<!-- Partal view-->
+<div class="d-grid gap-3 ">
 <a asp-controller="Home" asp-action="Index" asp-route-projectHi="" asp-route-pageNum ="" class="btn btn-outline-secondary"> Home</a>
 @foreach (string t in Model)
     {
-        <a asp-controller="Home" asp-action="Index" asp-route-projectHi="@t" asp-route-pageNum="" class="btn @( ViewBag.SelectedType == t ? "btn-primary":"btn-outline-secondary")">@t</a>
+        <a asp-controller="Home" asp-action="Index" asp-route-projectHi="@t" asp-route-pageNum="1" class="btn @( ViewBag.SelectedType == t ? "btn-primary":"btn-outline-secondary")">@t</a>
     }
+</div>
+<br />
+
+<button type="button" class="btn btn-lg btn-dark" data-toggle="popover" title="Progress bar" data-content="This is the overall progress of the remake of the Amazon website! Almost there!">Click to learn more about this!</button>
+<br /><br />
+<div class="progress">
+    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 </div>

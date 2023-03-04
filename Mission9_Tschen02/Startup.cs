@@ -58,22 +58,20 @@ namespace Mission9_Tschen02
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                   name: "type",
-                   pattern: "{projectHi}",
-                   defaults: new { Controller = "Home ", Action = "Index"});
+               endpoints.MapControllerRoute(name: "typepage",
+               pattern: "{projectHi}/Page{pageNum}",
+               defaults: new { Controller = "Home", action = "Index" });
 
-                endpoints.MapControllerRoute(name:"typepage",
-                    pattern:"{projectType}/Page{pageNum}",
-                    defaults: new { Controller = "Home", action = "Index" });
+               endpoints.MapControllerRoute(
+                name: "Paging",
+                pattern: "Page{pageNum}",
+                defaults: new { Controller = "Home", action = "Index", pageNum = 1 });
 
-                //endpoints.MapControllerRoute(
-                //     name: "Paging",
-                //     pattern: "Page{pageNum}",
-                //     defaults: new { Controller = "Home", action = "Index" , pageNum = 1}
-                // );
+               endpoints.MapControllerRoute(
+                    name: "type",
+                    pattern: "{projectHi}",
+                    defaults: new { Controller = "Home ", Action = "Index" });
 
-               
                 endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
             });
