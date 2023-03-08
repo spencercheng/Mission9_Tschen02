@@ -9,7 +9,7 @@ using Mission9_Tschen02.Models;
 namespace Mission9_Tschen02.Migrations
 {
     [DbContext(typeof(BookstoreContext))]
-    [Migration("20230308195028_Initial")]
+    [Migration("20230306204153_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
