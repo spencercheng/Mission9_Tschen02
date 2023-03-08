@@ -20,6 +20,6 @@ namespace Mission9_Tschen02.Models
         }
 
         public DbSet<Book> Books { get; set; }
-        public DbSet<Donation> Donations { get; set; }
+        public DbSet<Purchase> Donations { get; set; }
     }
 }

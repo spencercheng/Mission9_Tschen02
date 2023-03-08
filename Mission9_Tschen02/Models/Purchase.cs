@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Mission9_Tschen02.Models
 {
-    public class Donation
+    public class Purchase
     {
         [Key]
         [BindNever]
-        public int DonationId { get; set; }
+        public int PurchaseId { get; set; }
 
         [BindNever]
         public ICollection<BasketLineItem>Lines { get; set; }
