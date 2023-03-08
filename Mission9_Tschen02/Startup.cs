@@ -32,6 +32,7 @@ namespace Mission9_Tschen02
                    options.UseSqlite(Configuration["ConnectionStrings:WaterDBConnection"]);
                });
             services.AddScoped<IBookProjectRepository, EFBookProjectRepositoryClass>();
+            services.AddScoped<IDonationRepository, EFDonationRepository>();
             //services.AddScoped<IBookProjectRepository, EFBookProjectRepositoryClass>();
             services.AddRazorPages();
             services.AddDistributedMemoryCache();
